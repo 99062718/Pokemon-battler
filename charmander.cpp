@@ -7,3 +7,7 @@ Charmander::Charmander(std::string pokeName, std::string weak, std::string stron
 void Charmander::battlecry(){
     std::cout << name;
 }
+
+void Charmander::setName(std::string name){
+    (*this).name = name;
+}
