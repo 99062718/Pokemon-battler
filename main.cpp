@@ -3,7 +3,7 @@
 
 int main(){
     std::string name;
-    Charmander charmander("", "Water", "Fire");
+    Charmander charmander("", "Water", "Fire", 0);
 
     while (true) {
         std::cout << "Enter a name: ";
