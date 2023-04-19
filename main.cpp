@@ -2,7 +2,7 @@
 #include "pokemon/charmander.hpp"
 #include "trainer/trainer.hpp"
 
-void nameTrainer(Trainer &trainer){
+std::string nameTrainer(){
     std::string name;
     while (true) {
         std::cout << "Enter a name: ";
@@ -12,25 +12,16 @@ void nameTrainer(Trainer &trainer){
             std::cout << "Please enter a valid name!" << std::endl;
             continue;
         }
+
+        return name;
     }
 }
 
 int main(){
-    std::string name;
-    Charmander charmander("", "Water", "Fire");
+    Trainer trainer1(nameTrainer(), {});
+    Trainer trainer2(nameTrainer(), {});
 
-    while (true) {
-        std::cout << "Enter a name: ";
-        std::cin >> name;
-
-        if (name == ""){
-            std::cout << "Please enter a valid name!" << std::endl;
-            continue;
-        }
-
-        charmander.setName(name);
-
-        for (int x = 0; x < 10; x++)
-            charmander.battlecry();
+    for (int x = 0; x < 6; x++) {
+        
     }
 }
