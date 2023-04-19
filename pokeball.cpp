@@ -1,7 +1,8 @@
 #include "pokeball.hpp"
+#include <iostream>
 
-Pokeball::Pokeball(Charmander* charmander):
-    charmander(charmander){}
+Pokeball::Pokeball(Charmander* Charmander):
+    charmander(Charmander){}
 
 Charmander* Pokeball::release(){
     Charmander* temp = charmander;
