@@ -6,6 +6,7 @@ Pokeball::Pokeball(Charmander* charmander):
 Charmander* Pokeball::release(){
     Charmander* temp = charmander;
     charmander = nullptr;
+    temp->battlecry();
     return temp;
 }
 
