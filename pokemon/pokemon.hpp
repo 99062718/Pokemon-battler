@@ -6,7 +6,7 @@ class Pokemon{
 public:
     Pokemon(std::string pokeName, std::string weak, std::string strong);
 
-    void battlecry();
+    virtual void battlecry() = 0;
 
     void setName(std::string name);
 };
