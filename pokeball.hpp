@@ -1,11 +1,11 @@
 #pragma once
-#include "pokemon/charmander.hpp"
+#include "pokemon/pokemon.hpp"
 
 class Pokeball{
-    Charmander* charmander = nullptr;
+    Pokemon* pokemon = nullptr;
 public:
-    Pokeball(Charmander* charmander = nullptr);
+    Pokeball(Pokemon* pokemon = nullptr);
 
-    Charmander* release();
-    void returnInside(Charmander* charmander);
+    Pokemon* release();
+    void returnInside(Pokemon* pokemon);
 };

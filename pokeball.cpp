@@ -1,16 +1,16 @@
 #include "pokeball.hpp"
 #include <iostream>
 
-Pokeball::Pokeball(Charmander* Charmander):
-    charmander(Charmander){}
+Pokeball::Pokeball(Pokemon* Pokemon):
+    pokemon(Pokemon){}
 
-Charmander* Pokeball::release(){
-    Charmander* temp = charmander;
-    charmander = nullptr;
+Pokemon* Pokeball::release(){
+    Pokemon* temp = pokemon;
+    pokemon = nullptr;
     temp->battlecry();
     return temp;
 }
 
-void Pokeball::returnInside(Charmander* charmander){
-    (*this).charmander = charmander;
+void Pokeball::returnInside(Pokemon* pokemon){
+    (*this).pokemon = pokemon;
 }

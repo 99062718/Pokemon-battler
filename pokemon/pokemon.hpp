@@ -1,10 +1,10 @@
 #pragma once
 #include <string>
 
-class Charmander final{
+class Pokemon{
     std::string name, weakness, strength;
 public:
-    Charmander(std::string pokeName, std::string weak, std::string strong);
+    Pokemon(std::string pokeName, std::string weak, std::string strong);
 
     void battlecry();
 
