@@ -1,4 +1,4 @@
-#include "charmander.hpp"
+#include "pokemon.hpp"
 #include <iostream>
 
 Pokemon::Pokemon(std::string pokeName, std::string weak, std::string strong):

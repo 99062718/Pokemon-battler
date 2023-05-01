@@ -1,4 +1,4 @@
-#include "pokemon.hpp"
+#include "pokemon/pokemon.hpp"
 #include "pokemon/bulbasaur/bulbasaur.hpp"
 #include "pokemon/charmander/charmander.hpp"
 #include "pokemon/squirtle/squirtle.hpp"
