@@ -2,5 +2,7 @@
 #include "../pokemon.hpp"
 
 class Bulbasaur final : public Pokemon{
-    Bulbasaur() : Pokemon("Bulbasaur", "fire", "leaf")
-}
+    Bulbasaur();
+    
+    void battlecry() override;
+};

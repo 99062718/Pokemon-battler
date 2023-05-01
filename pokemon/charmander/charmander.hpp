@@ -2,5 +2,7 @@
 #include "../pokemon.hpp"
 
 class Charmander final : public Pokemon{
-    Charmander() : Pokemon("Charmander", "fire", "leaf")
-}
+    Charmander();
+    
+    void battlecry() override;
+};
