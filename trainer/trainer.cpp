@@ -1,16 +1,17 @@
 #include "trainer.hpp"
+#include "../pokemon/charmander/charmander.hpp"
 #include <iostream>
 
-Trainer::Trainer(std::string Name, std::vector<Pokeball> Belt){
+Trainer::Trainer(std::string Name, std::vector<Pokemon*> Belt){
     belt.reserve(5);
     name = Name;
 
     for (int x = 0; x < 6; x++){
         if (x < Belt.size()){
-            belt.push_back(&Belt[x]);
+            belt.push_back(new Pokeball(&(*Belt[x])));
             continue;
         }
-        belt.push_back(new Pokeball(new Charmander("Charmander", "Water", "Fire")));
+        belt.push_back(new Pokeball(new Charmander()));
     }
 }
 

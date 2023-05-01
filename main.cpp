@@ -1,5 +1,6 @@
 #include <iostream>
-#include "pokemon/charmander.hpp"
+#include "PokeConstructor.hpp"
+#include "pokemon/pokemon.hpp"
 #include "trainer/trainer.hpp"
 
 std::string nameTrainer(){
@@ -18,14 +19,14 @@ std::string nameTrainer(){
 }
 
 int main(){
-    Trainer trainer1(nameTrainer(), {});
-    Trainer trainer2(nameTrainer(), {});
+    Trainer trainer1(nameTrainer(), {PokeConstructor[0]()});
+    Trainer trainer2(nameTrainer(), {PokeConstructor[0]()});
 
     for (int x = 0; x < 6; x++) {
         std::cout << trainer1.getName() << " chooses pokemon #" << x << std::endl;
-        Charmander* pokemon1 = trainer1.getBall(x)->release();
+        Pokemon* pokemon1 = trainer1.getBall(x)->release();
         std::cout << trainer2.getName() << " chooses pokemon #" << x << std::endl;
-        Charmander* pokemon2 = trainer2.getBall(x)->release();
+        Pokemon* pokemon2 = trainer2.getBall(x)->release();
 
         std::cout << trainer1.getName() << " returns their pokemon" << std::endl;
         trainer1.getBall(x)->returnInside(pokemon1);
