@@ -19,8 +19,8 @@ std::string nameTrainer(){
 }
 
 int main(){
-    Trainer trainer1(nameTrainer(), {PokeConstructor[0]()});
-    Trainer trainer2(nameTrainer(), {PokeConstructor[0]()});
+    Trainer trainer1(nameTrainer(), {PokeConstructor[0](), PokeConstructor[1](), PokeConstructor[2](), PokeConstructor[0](), PokeConstructor[1](), PokeConstructor[2]()});
+    Trainer trainer2(nameTrainer(), {PokeConstructor[0](), PokeConstructor[1](), PokeConstructor[2](), PokeConstructor[0](), PokeConstructor[1](), PokeConstructor[2]()});
 
     for (int x = 0; x < 6; x++) {
         std::cout << trainer1.getName() << " chooses pokemon #" << x << std::endl;
