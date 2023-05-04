@@ -7,6 +7,7 @@ class Trainer{
     std::vector<Pokeball*> belt = {};
 public:
     Trainer(std::string Name, std::vector<Pokemon*> Belt);
+    Trainer(std::string Name, std::vector<int> Belt);
 
     void setName(std::string name);
     std::string getName();

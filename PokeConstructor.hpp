@@ -1,3 +1,4 @@
+#pragma once
 #include "pokemon/pokemon.hpp"
 #include "pokemon/bulbasaur/bulbasaur.hpp"
 #include "pokemon/charmander/charmander.hpp"
