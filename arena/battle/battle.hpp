@@ -7,5 +7,5 @@ class Battle{
     static int battles;
     std::array<Trainer*, 2> trainers;
 public:
-    Battle(std::array<Trainer*, 2> trainers);
+    Battle(std::array<Trainer*, 2> &trainers);
 };

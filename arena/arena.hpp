@@ -1,10 +1,11 @@
 #pragma once
 #include "battle/battle.hpp"
+#include <vector>
 
 class Arena{
-    Battle* battles[5];
+    std::vector<Battle*> battles = {};
 public:
     Arena();
 
-    void addBattle(Battle* battle);
+    bool addBattle(Battle* battle);
 };
