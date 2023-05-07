@@ -8,3 +8,11 @@ Pokemon::Pokemon(std::string pokeName, std::string weak, std::string strong):
 void Pokemon::setName(std::string name){
     (*this).name = name;
 }
+
+std::string Pokemon::getStrength(){
+    return strength;
+}
+
+std::string Pokemon::getWeak(){
+    return weakness;
+}

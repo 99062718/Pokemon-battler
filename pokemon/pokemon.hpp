@@ -9,4 +9,7 @@ public:
     virtual void battlecry() = 0;
 
     void setName(std::string name);
+
+    std::string getStrength();
+    std::string getWeak();
 };
