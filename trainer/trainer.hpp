@@ -13,4 +13,6 @@ public:
     std::string getName();
 
     Pokeball* getBall(int ballIndex);
+
+    int getBeltSize();
 };

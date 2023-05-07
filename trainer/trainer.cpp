@@ -40,3 +40,7 @@ std::string Trainer::getName(){
 Pokeball* Trainer::getBall(int ballIndex){
     return belt[ballIndex];
 }
+
+int Trainer::getBeltSize(){
+    return belt.size();
+}

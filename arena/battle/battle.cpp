@@ -9,11 +9,17 @@ Battle::Battle(std::array<Trainer*, 2> &trainers){
 }
 
 void Battle::startBattle(){
-    
+    battles++;
+    std::vector<int> order1 = createOrder(trainers[0]->getBeltSize());
+    std::vector<int> order2 = createOrder(trainers[1]->getBeltSize());
+
+    for (int x = 0; x < 6; x++){ // we are assuming that every trainer here has a belt of 6. this can be problematic if one of them has a belt of 4 for example. Perhaps use max here?
+
+    }
 }
 
 void Battle::initRound(){
-
+    rounds++;
 }
 
 void Battle::fight(Pokemon* pokemon1, Pokemon* pokemon2){
