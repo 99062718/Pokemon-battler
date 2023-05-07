@@ -8,6 +8,14 @@ Battle::Battle(std::array<Trainer*, 2> &trainers){
     this->trainers = trainers;
 }
 
+void Battle::startBattle(){
+    
+}
+
+void Battle::initRound(){
+
+}
+
 void Battle::fight(Pokemon* pokemon1, Pokemon* pokemon2){
     if (pokemon1->getStrength() == pokemon2->getWeak()){
         std::cout << pokemon1->getName() << " has won!" << std::endl;
@@ -22,4 +30,22 @@ void Battle::fight(Pokemon* pokemon1, Pokemon* pokemon2){
     std::cout << "A draw has been reached!" << std::endl;
     score[0]++;
     score[1]++;
+}
+
+std::vector<int> Battle::createOrder(int beltSize){
+    std::vector<int> order = {};
+    order.reserve(beltSize);
+
+    for (int x = 0; x < beltSize; x++){
+        order.push_back(x);
+    }
+
+    shuffle(order);
+
+    return order;
+}
+
+void Battle::shuffle(std::vector<int> &order){
+    auto rng = std::default_random_engine{};
+    std::shuffle(std::begin(order), std::end(order), rng);
 }
