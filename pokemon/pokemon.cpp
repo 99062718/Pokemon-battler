@@ -9,6 +9,10 @@ void Pokemon::setName(std::string name){
     (*this).name = name;
 }
 
+std::string Pokemon::getName(){
+    return name;
+}
+
 std::string Pokemon::getStrength(){
     return strength;
 }

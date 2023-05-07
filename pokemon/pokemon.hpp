@@ -10,6 +10,7 @@ public:
 
     void setName(std::string name);
 
+    std::string getName();
     std::string getStrength();
     std::string getWeak();
 };
