@@ -15,7 +15,7 @@ public:
 
     void startBattle();
 
-    void initRound();
+    void initRound(int first, int second);
 
     void fight(Pokemon* pokemon1, Pokemon* pokemon2);
 

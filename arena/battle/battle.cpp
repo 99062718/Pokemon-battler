@@ -13,13 +13,24 @@ void Battle::startBattle(){
     std::vector<int> order1 = createOrder(trainers[0]->getBeltSize());
     std::vector<int> order2 = createOrder(trainers[1]->getBeltSize());
 
-    for (int x = 0; x < 6; x++){ // we are assuming that every trainer here has a belt of 6. this can be problematic if one of them has a belt of 4 for example. Perhaps use max here?
-
+    for (int x = 0; x < std::min(trainers[0]->getBeltSize(), trainers[1]->getBeltSize()); x++){
+        initRound(order1[x], order2[x]);
     }
 }
 
-void Battle::initRound(){
+void Battle::initRound(int first, int second){
     rounds++;
+    std::cout << trainers[0]->getName() << " chooses pokemon #" << first << std::endl;
+    Pokemon* poke1 = trainers[0]->getBall(first)->release();
+    std::cout << trainers[1]->getName() << " chooses pokemon #" << second << std::endl;
+    Pokemon* poke2 = trainers[1]->getBall(second)->release();
+
+    fight(poke1, poke2);
+
+    std::cout << trainers[0]->getName() << " returns their pokemon" << std::endl;
+    trainers[0]->getBall(first)->returnInside(poke1);
+    std::cout << trainers[1]->getName() << " returns their pokemon" << std::endl;
+    trainers[0]->getBall(first)->returnInside(poke2);
 }
 
 void Battle::fight(Pokemon* pokemon1, Pokemon* pokemon2){
