@@ -8,4 +8,6 @@ public:
     Arena();
 
     bool addBattle(Battle* battle);
+
+    void startBattles();
 };
