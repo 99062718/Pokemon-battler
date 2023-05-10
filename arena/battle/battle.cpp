@@ -38,11 +38,13 @@ void Battle::fight(Pokemon* pokemon1, Pokemon* pokemon2){
     if (pokemon1->getStrength() == pokemon2->getWeak()){
         std::cout << pokemon1->getName() << " has won!" << std::endl;
         score[0];
+        return;
     }
 
     if (pokemon1->getWeak() == pokemon2->getStrength()){
         std::cout << pokemon2->getName() << " has won!" << std::endl;
         score[1]++;
+        return;
     }
 
     std::cout << "A draw has been reached!" << std::endl;
