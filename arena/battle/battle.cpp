@@ -1,5 +1,6 @@
 #include "battle.hpp"
 #include <iostream>
+#include <chrono>
 
 int Battle::rounds = 0;
 int Battle::battles = 0;
@@ -64,5 +65,6 @@ std::vector<int> Battle::createOrder(int beltSize){
 
 void Battle::shuffle(std::vector<int> &order){
     auto rng = std::default_random_engine{};
+    rng.seed(std::chrono::system_clock::now().time_since_epoch().count());
     std::shuffle(std::begin(order), std::end(order), rng);
 }
